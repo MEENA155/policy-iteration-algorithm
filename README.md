@@ -1,4 +1,3 @@
-![268890939-58c4d8bd-b41f-4b9a-9cad-3d9a50acbde4](https://github.com/MEENA155/policy-iteration-algorithm/assets/94677128/65242ca7-4fb9-4f76-853b-23ce492cd953)# POLICY ITERATION ALGORITHM
 
 ## AIM
 To implement a policy iteration algorithm for the given MDP.
@@ -27,21 +26,21 @@ To reach state 7 (Goal) : +1 otherwise : 0
 ## POLICY ITERATION ALGORITHM
 The algorithm implemented in the policy_iteration is a method used to find the optimal policy in a Markov decision process (MDP). Here's a step-by-step explanation of the algorithm:
 
-Initialize the policy pi. In this implementation, a random action is chosen for each state s in the MDP P. The initial policy is represented by the lambda function pi=lambda s:{s:a for s,a in enumerate(random_actions)}[s], where random_actions is a list of randomly chosen actions for each state.
+1. Initialize the policy pi. In this implementation, a random action is chosen for each state s in the MDP P. The initial policy is represented by the lambda function pi=lambda s:{s:a for s,a in enumerate(random_actions)}[s], where random_actions is a list of randomly chosen actions for each state.
 
-Enter a loop that continues until the policy pi is no longer changing. This is determined by comparing the previous policy (old_pi) with the current policy computed in the loop.
+2. Enter a loop that continues until the policy pi is no longer changing. This is determined by comparing the previous policy (old_pi) with the current policy computed in the loop.
 
-Store the previous policy as old_pi for comparison later.
+3. Store the previous policy as old_pi for comparison later.
 
-Perform policy evaluation using the function policy_evaluation. This step calculates the state-values (V) for each state s given the current policy pi. The state-values represent the expected cumulative rewards starting from state s following policy pi and discounting future rewards by a factor of gamma. The function policy_evaluation is called with the arguments pi, P, gamma, and theta.
+4. Perform policy evaluation using the function policy_evaluation. This step calculates the state-values (V) for each state s given the current policy pi. The state-values represent the expected cumulative rewards starting from state s following policy pi and discounting future rewards by a factor of gamma. The function policy_evaluation is called with the arguments pi, P, gamma, and theta.
 
-Perform policy improvement using the function policy_improvement. This step updates the policy pi based on the current state-values V. The function policy_improvement is called with the arguments V, P, and gamma.
+5. Perform policy improvement using the function policy_improvement. This step updates the policy pi based on the current state-values V. The function policy_improvement is called with the arguments V, P, and gamma.
 
-Check if the policy has converged by comparing the previous policy old_pi with the current policy {s:pi(s) for s in range(len(P))}. If they are the same for all states s, the loop is exited.
+6. Check if the policy has converged by comparing the previous policy old_pi with the current policy {s:pi(s) for s in range(len(P))}. If they are the same for all states s, the loop is exited.
 
-Return the final state-values V and the optimal policy pi.
+7. Return the final state-values V and the optimal policy pi.
 
-To summarize, policy iteration iteratively improves the policy by alternating between policy evaluation and policy improvement steps until convergence is reached. The algorithm guarantees to find the optimal policy for the given MDP P with a discount factor gamma.
+8. To summarize, policy iteration iteratively improves the policy by alternating between policy evaluation and policy improvement steps until convergence is reached. The algorithm guarantees to find the optimal policy for the given MDP P with a discount factor gamma.
 
 ## POLICY IMPROVEMENT FUNCTION
 ```
@@ -71,8 +70,11 @@ def policy_iteration(P, gamma=1.0,theta=1e-10):
   return V,pi
 ```
 ## OUTPUT:
+### Optimal Policy:
 ![268890779-90801852-a094-4f70-8b8c-4bd1f8894f3c](https://github.com/MEENA155/policy-iteration-algorithm/assets/94677128/50709919-d7d0-410d-890b-4afa22eccbcf)
+### Optimal Value Function:
 ![268890855-f5b2e50b-4f40-44bc-8c96-4380c20e6ba2](https://github.com/MEENA155/policy-iteration-algorithm/assets/94677128/ce009dba-6118-477d-9089-ad269bbd9e05)
+### Success Rate for Optimal Policy:
 ![268890939-58c4d8bd-b41f-4b9a-9cad-3d9a50acbde4](https://github.com/MEENA155/policy-iteration-algorithm/assets/94677128/797575e9-0bdc-4602-a287-5a08f2cfc5be)
 
 
