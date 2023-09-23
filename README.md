@@ -1,4 +1,4 @@
-# POLICY ITERATION ALGORITHM
+![268890939-58c4d8bd-b41f-4b9a-9cad-3d9a50acbde4](https://github.com/MEENA155/policy-iteration-algorithm/assets/94677128/65242ca7-4fb9-4f76-853b-23ce492cd953)# POLICY ITERATION ALGORITHM
 
 ## AIM
 To implement a policy iteration algorithm for the given MDP.
@@ -21,7 +21,8 @@ The transition probabilities for the problem statement is:
 To reach state 7 (Goal) : +1 otherwise : 0
 
 ### Graphical Representation:
-![Uploading 268889089-23c50d3f-ad11-49b5-8dc1-3f3338f54ec6.png…]()
+![268889089-23c50d3f-ad11-49b5-8dc1-3f3338f54ec6](https://github.com/MEENA155/policy-iteration-algorithm/assets/94677128/e2765852-8f53-4bcf-bf8c-015143d23eb5)
+
 
 ## POLICY ITERATION ALGORITHM
 The algorithm implemented in the policy_iteration is a method used to find the optimal policy in a Markov decision process (MDP). Here's a step-by-step explanation of the algorithm:
@@ -70,8 +71,10 @@ def policy_iteration(P, gamma=1.0,theta=1e-10):
   return V,pi
 ```
 ## OUTPUT:
+![268890779-90801852-a094-4f70-8b8c-4bd1f8894f3c](https://github.com/MEENA155/policy-iteration-algorithm/assets/94677128/50709919-d7d0-410d-890b-4afa22eccbcf)
+![268890855-f5b2e50b-4f40-44bc-8c96-4380c20e6ba2](https://github.com/MEENA155/policy-iteration-algorithm/assets/94677128/ce009dba-6118-477d-9089-ad269bbd9e05)
+![268890939-58c4d8bd-b41f-4b9a-9cad-3d9a50acbde4](https://github.com/MEENA155/policy-iteration-algorithm/assets/94677128/797575e9-0bdc-4602-a287-5a08f2cfc5be)
 
-![268890779-90801852-a094-4f70-8b8c-4bd1f8894f3c](https://github.com/MEENA155/policy-iteration-algorithm/assets/94677128/1469c5ed-cf3b-4ec6-8dcf-9179239eb534)
 
 ## RESULT:
 
